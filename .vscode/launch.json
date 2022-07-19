@@ -1,0 +1,21 @@
+{
+    // Use IntelliSense to learn about possible attributes.
+    // Hover to view descriptions of existing attributes.
+    // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "cwd": "${workspaceRoot}",
+            "executable": "${workspaceFolder}/target/thumbv8m.main-none-eabi/debug/examples/blinky",
+            "name": "Debug blinky",
+            "request": "launch",
+            "type": "cortex-debug",
+            "servertype": "pyocd",
+            "serverpath": "${env:HOME}/Library/Python/3.9/bin/pyocd-gdbserver",
+            "serverArgs": ["--target", "lpc55s69"],
+            "numberOfProcessors": 2,
+            "targetId": "1",
+            "svdFile": "${env:HOME}/svd/nxp/LPC55S69_cm33_core0.xml",
+        },
+    ]
+}
